@@ -17,8 +17,16 @@ export async function DELETE(request) {
     return NextResponse.json({ message: "Topic deleted"}, { status: 200})
 }
 
-export async function GET() {
+export async function GET(request) {
     await connectMongoDB();
     const topics = await Topic.find();
     return NextResponse.json({ topics });
 }
+
+
+
+
+
+
+
+
